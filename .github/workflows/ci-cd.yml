@@ -96,7 +96,7 @@ jobs:
           file: ./frontend/Dockerfile
           push: true
           build-args: |
-            NEXT_PUBLIC_API_URL=http://localhost:3001
+            NEXT_PUBLIC_API_URL=
           tags: |
             ghcr.io/vivek-venugopal-gits/vegah-cloud-platform-frontend:latest
             ghcr.io/vivek-venugopal-gits/vegah-cloud-platform-frontend:${{ github.sha }}
