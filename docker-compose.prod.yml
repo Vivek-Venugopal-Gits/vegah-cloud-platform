@@ -35,7 +35,7 @@ services:
       retries: 10
 
   backend:
-    image: ghcr.io/vivek-venugopal-gits/vegah-cloud-platform-backend:579826cbc4544541de0f599a158b1c12b29a57d5
+    image: ghcr.io/vivek-venugopal-gits/vegah-cloud-platform-backend:${IMAGE_TAG:-579826cbc4544541de0f599a158b1c12b29a57d5}
     container_name: vega-backend
     restart: unless-stopped
     environment:
@@ -64,7 +64,7 @@ services:
       start_period: 20s
 
   worker:
-    image: ghcr.io/vivek-venugopal-gits/vegah-cloud-platform-worker:579826cbc4544541de0f599a158b1c12b29a57d5
+    image: ghcr.io/vivek-venugopal-gits/vegah-cloud-platform-worker:${IMAGE_TAG:-579826cbc4544541de0f599a158b1c12b29a57d5}
     container_name: vega-worker
     restart: unless-stopped
     environment:
@@ -83,7 +83,7 @@ services:
         condition: service_healthy
 
   frontend:
-    image: ghcr.io/vivek-venugopal-gits/vegah-cloud-platform-frontend:579826cbc4544541de0f599a158b1c12b29a57d5
+    image: ghcr.io/vivek-venugopal-gits/vegah-cloud-platform-frontend:${IMAGE_TAG:-579826cbc4544541de0f599a158b1c12b29a57d5}
     container_name: vega-frontend
     restart: unless-stopped
     environment:
