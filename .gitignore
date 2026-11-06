@@ -1,8 +1,19 @@
+
+# Dependencies
 node_modules/
+
+# Build outputs
 dist/
 .next/
+
+# Environment variables and secrets
 .env
 .env.*
 !.env.example
+
 # TypeScript build cache
 *.tsbuildinfo
+
+# Local backup files
+*.prod.yml.backup
+*prod.yml.backup
